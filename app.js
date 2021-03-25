@@ -161,7 +161,7 @@ function create (env, ctx) {
     return app;
   }
 
-  if (env.settings.isEnabled('cors')) {
+  //if (env.settings.isEnabled('cors')) {
     var allowOrigin = _get(env, 'extendedSettings.cors.allowOrigin') || '*';
     console.info('Enabled CORS, allow-origin:', '*');
     app.use(function allowCrossDomain (req, res, next) {
@@ -176,7 +176,7 @@ function create (env, ctx) {
         next();
       }
     });
-  }
+  //}
 
   ///////////////////////////////////////////////////
   // api and json object variables
